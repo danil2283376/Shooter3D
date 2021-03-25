@@ -8,11 +8,9 @@ public class MovePlayer : MonoBehaviour
     public float speed = 0.3f;
 
     private Rigidbody rb3d;
-	private CapsuleCollider collider;
     void Start()
     {
         rb3d = GetComponent<Rigidbody>();
-		collider = GetComponent<CapsuleCollider>();
     }
 
 	// Update is called once per frame

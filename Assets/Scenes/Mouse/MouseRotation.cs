@@ -17,7 +17,13 @@ public class MouseRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        LookAtObject();
+        RotationMouse();
+    }
+
+    void LookAtObject() 
+    {
+        transform.LookAt(lookAtObject.transform);
     }
 
     void RotationMouse() 
@@ -26,7 +32,12 @@ public class MouseRotation : MonoBehaviour
 
         float y = Input.GetAxis("Mouse Y");
 
-        Vector3 movement = new Vector3(x, 0.0f, y);
-        positionCamera.position = movement;
+        float distanceBeetweenObj = Vector3.Distance(lookAtObject.transform.position, transform.position);
+        Vector3 movement = new Vector3(transform.position.x + x, transform.position.y + y, 0.0f);
+        if (distanceBeetweenObj < 10)
+            transform.position = movement;
+        print(distanceBeetweenObj);
+        //Vector3 movement = new Vector3(x, 0.0f, y);
+        //positionCamera.position = movement;
     }
 }
