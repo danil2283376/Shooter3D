@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
+	//НАПИСАТЬ НОРМАЛЬНОЕ ПЕРЕМЕЩЕНИЕ ОБЪЕКТА В ТУ СТОРОНУ КУДА СМОТРИТ ИГРОК
+
     // Start is called before the first frame update
-    public float speed = 0.3f;
+    public float speedMove = 0.3f;
+	public float speedRotation = 0.3f;
 
     private Rigidbody rb3d;
     void Start()
@@ -16,17 +19,18 @@ public class MovePlayer : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate()
 	{
-		Move();
+		
+		//Move();
 	}
 
 	void Move()
 	{
-		float moveX = Input.GetAxis("Horizontal");
+		//float moveX = Input.GetAxis("Horizontal");
 
-		float moveY = Input.GetAxis("Vertical");
+		//float moveY = Input.GetAxis("Vertical");
 
-		Vector3 movement = new Vector3(moveX * speed, 0.0f, moveY * speed);
-		if (rb3d.velocity.x < 5 && rb3d.velocity.z < 5) // ограничение скорости объекта
-			rb3d.AddForce(movement, ForceMode.Impulse);
+		//Vector3 movement = new Vector3(moveX * speed, 0.0f, moveY * speed);
+		//if (rb3d.velocity.x < 5 && rb3d.velocity.z < 5) // ограничение скорости объекта
+		//	rb3d.AddForce(movement, ForceMode.Impulse);
 	}
 }

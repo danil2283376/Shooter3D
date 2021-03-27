@@ -4,40 +4,66 @@ using UnityEngine;
 
 public class MouseRotation : MonoBehaviour
 {
-    public float speedRotation = 0.5f;
-    public GameObject lookAtObject;
+    public float speed = 0.1f;
+    float angleX = 0.0f;
+    float angleY = 0.0f;
+    //public Transform playerBody;
 
-    private Transform positionCamera;
-    // Start is called before the first frame update
+    //float xRotation = 0f;
+    private float mouseX = 0.0f;
+    private float mouseY = 0.0f;
     void Start()
     {
-        positionCamera = GetComponent<Transform>();
+            
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        LookAtObject();
-        RotationMouse();
+        mouseX = Input.GetAxis("Mouse X") * speed;
+
+        mouseY = Input.GetAxis("Mouse Y") * speed;
     }
 
-    void LookAtObject() 
+    void LateUpdate()
     {
-        transform.LookAt(lookAtObject.transform);
+        angleX += mouseX;
+        angleY += mouseY;
+        angleY = Mathf.Clamp(angleY, -60, 60);
+        transform.eulerAngles = new Vector3(-angleY, angleX, 0.0f);
+
+        //xRotation -= mouseY;
+        //xRotation = Mathf.Clamp(xRotation, -90f, 90f); // ограничение обзора
+        //transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // поворот по вертикали
+        //playerBody.Rotate(Vector3.up * mouseX);
     }
 
-    void RotationMouse() 
-    {
-        float x = Input.GetAxis("Mouse X");
+    //public Transform target;
+    //public Vector3 offset;
+    //public float sensitivity = 3; // чувствительность мышки
+    //public float limit = 80; // ограничение вращения по Y
+    //public float zoom = 0.25f; // чувствительность при увеличении, колесиком мышки
+    //public float zoomMax = 10; // макс. увеличение
+    //public float zoomMin = 3; // мин. увеличение
+    //private float X, Y;
 
-        float y = Input.GetAxis("Mouse Y");
+    //void Start()
+    //{
+    //	limit = Mathf.Abs(limit);
+    //	if (limit > 90) limit = 90;
+    //	offset = new Vector3(offset.x, offset.y, -Mathf.Abs(zoomMax) / 2);
+    //	transform.position = target.position + offset;
+    //}
 
-        float distanceBeetweenObj = Vector3.Distance(lookAtObject.transform.position, transform.position);
-        Vector3 movement = new Vector3(transform.position.x + x, transform.position.y + y, 0.0f);
-        if (distanceBeetweenObj < 10)
-            transform.position = movement;
-        print(distanceBeetweenObj);
-        //Vector3 movement = new Vector3(x, 0.0f, y);
-        //positionCamera.position = movement;
-    }
+    //void Update()
+    //{
+    //	if (Input.GetAxis("Mouse ScrollWheel") > 0) offset.z += zoom;
+    //	else if (Input.GetAxis("Mouse ScrollWheel") < 0) offset.z -= zoom;
+    //	offset.z = Mathf.Clamp(offset.z, -Mathf.Abs(zoomMax), -Mathf.Abs(zoomMin));
+
+    //	X = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivity;
+    //	Y += Input.GetAxis("Mouse Y") * sensitivity;
+    //	Y = Mathf.Clamp(Y, -limit, limit);
+    //	transform.localEulerAngles = new Vector3(-Y, X, 0);
+    //	transform.position = transform.localRotation * offset + target.position;
+    //}
 }
