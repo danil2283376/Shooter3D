@@ -20,7 +20,6 @@ public class MouseRotation : MonoBehaviour
     private void Update()
     {
         mouseX = Input.GetAxis("Mouse X") * speed;
-
         mouseY = Input.GetAxis("Mouse Y") * speed;
     }
 
