@@ -56,10 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Player\MovePlayer\MovePlayer.cs" />
-    <Compile Include="Assets\Scenes\Player\RotationPlayer\MouseRotation.cs" />
-    <Compile Include="Assets\Scenes\Player\Weapon\AbstractWeapon.cs" />
-    <Compile Include="Assets\Scenes\Player\Weapon\Weapons\Pistol.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\MovePlayer\MovePlayer.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\RotationPlayer\MouseRotation.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Weapon\AbstractWeapon.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Weapon\Weapons\Pistol.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Weapon\Bullets\AbstractBullet.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Weapon\Bullets\Bullets\Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
