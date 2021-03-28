@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\Player\MovePlayer\MovePlayer.cs" />
     <Compile Include="Assets\Scenes\Player\RotationPlayer\MouseRotation.cs" />
+    <Compile Include="Assets\Scenes\Player\Weapon\AbstractWeapon.cs" />
+    <Compile Include="Assets\Scenes\Player\Weapon\Weapons\Pistol.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
