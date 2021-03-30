@@ -56,13 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\PlayerScript\Inventory\AddImageOnInventory.cs" />
     <Compile Include="Assets\Scenes\PlayerScript\MovePlayer\MovePlayer.cs" />
     <Compile Include="Assets\Scenes\PlayerScript\RotationPlayer\MouseRotation.cs" />
-    <Compile Include="Assets\Scenes\PlayerScript\Weapon\AbstractWeapon.cs" />
-    <Compile Include="Assets\Scenes\PlayerScript\Weapon\Weapons\Weapon.cs" />
-    <Compile Include="Assets\Scenes\PlayerScript\Weapon\Bullets\AbstractBullet.cs" />
     <Compile Include="Assets\Scenes\PlayerScript\Weapon\Bullets\Bullets\Bullet.cs" />
-    <Compile Include="Assets\Scenes\PlayerScript\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Weapon\AbstractWeapon.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Weapon\Bullets\AbstractBullet.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Weapon\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Inventory\ChangeItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

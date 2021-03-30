@@ -11,6 +11,7 @@ public abstract class AbstractWeapon : MonoBehaviour
     public int damage = 10; // урон
     public float rateFire = 5; // кол-во патрон за минуту
     public GameObject prefabBullet;
+    public bool weaponOnPlayer = false; // оружие на игроке
     public abstract void Shoot();
     public abstract void Reload();
 }
