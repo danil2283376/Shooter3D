@@ -41,5 +41,6 @@ public class ChangeItem : MonoBehaviour
         GameObject clone = Instantiate(items[indexItem], gameObject.transform);
         clone.transform.position = new Vector3(oldTransform.transform.position.x,
             oldTransform.transform.position.y, oldTransform.transform.position.z);
+        clone.transform.GetChild(0).GetComponent<Weapon>().weaponOnPlayer = true;
     }
 }
