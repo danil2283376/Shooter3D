@@ -59,11 +59,12 @@
     <Compile Include="Assets\Scenes\PlayerScript\Inventory\AddImageOnInventory.cs" />
     <Compile Include="Assets\Scenes\PlayerScript\MovePlayer\MovePlayer.cs" />
     <Compile Include="Assets\Scenes\PlayerScript\RotationPlayer\MouseRotation.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Inventory\PickInvetoryItem.cs" />
+    <Compile Include="Assets\Scenes\PlayerScript\Inventory\ChangeItem.cs" />
     <Compile Include="Assets\Scenes\PlayerScript\Weapon\Bullets\Bullets\Bullet.cs" />
     <Compile Include="Assets\Scenes\PlayerScript\Weapon\AbstractWeapon.cs" />
     <Compile Include="Assets\Scenes\PlayerScript\Weapon\Bullets\AbstractBullet.cs" />
     <Compile Include="Assets\Scenes\PlayerScript\Weapon\Weapons\Weapon.cs" />
-    <Compile Include="Assets\Scenes\PlayerScript\Inventory\ChangeItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

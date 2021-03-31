@@ -588,6 +588,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 974897977144854412, guid: f76f44036fc3be24bab3f08188f1ee4a, type: 3}
+      propertyPath: rateFire
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 974897977144854412, guid: f76f44036fc3be24bab3f08188f1ee4a, type: 3}
       propertyPath: timeReload
       value: 1.5
       objectReference: {fileID: 0}
@@ -1877,6 +1881,7 @@ GameObject:
   - component: {fileID: 2009570917}
   - component: {fileID: 2009570918}
   - component: {fileID: 2009570919}
+  - component: {fileID: 2009570920}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2045,6 +2050,28 @@ MonoBehaviour:
   items:
   - {fileID: 1553298275}
   - {fileID: 962382452}
+--- !u!114 &2009570920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009570910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce499773c1c04f4aa9695d7009d481c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standartColor: {r: 0.91372555, g: 0.7803922, b: 0.7803922, a: 1}
+  clickColor: {r: 0.5188679, g: 0.30593628, b: 0.30593628, a: 1}
+  cells:
+  - {fileID: 892999421}
+  - {fileID: 1549158811}
+  - {fileID: 1744135252}
+  - {fileID: 1734709284}
+  - {fileID: 1949247157}
+  - {fileID: 2021993925}
+  - {fileID: 1253787419}
 --- !u!1 &2021993925
 GameObject:
   m_ObjectHideFlags: 0
