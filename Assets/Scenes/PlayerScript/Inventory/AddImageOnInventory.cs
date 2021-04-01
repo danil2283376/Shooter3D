@@ -12,12 +12,14 @@ public class AddImageOnInventory : MonoBehaviour
     public char numberCells;
     private int numberAscii;
     private ChangeItem scriptChangeItem;
+    private PickInvetoryItem scriptChangeCells;
     // Start is called before the first frame update
     void Start()
     {
         // преобразую в кейкод через таблицу Ascii
         numberAscii = numberCells;
         scriptChangeItem = gameObject.GetComponent<ChangeItem>();
+        scriptChangeCells = GetComponent<PickInvetoryItem>();
     }
 
     // Update is called once per frame
@@ -35,8 +37,8 @@ public class AddImageOnInventory : MonoBehaviour
         if (other.transform.tag == "Drop")
         {
             AddImageOnGUI(other.transform.name);
-            Destroy(other.gameObject);
             scriptChangeItem.ChangeItemInHand(other.name, other.tag);
+            Destroy(other.gameObject);
         }
     }
     void AddImageOnGUI(string nameItem) 
@@ -58,6 +60,7 @@ public class AddImageOnInventory : MonoBehaviour
             if (componentImage.sprite == null)
             {
                 componentImage.sprite = sprite;
+                scriptChangeCells.ChangeItemInGUI(i);
                 break;
             }
         }
