@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Weapon
   - Drop
+  - Plane
   layers:
   - Default
   - TransparentFX

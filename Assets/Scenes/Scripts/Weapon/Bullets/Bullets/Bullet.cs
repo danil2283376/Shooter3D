@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float timeLive = 5.0f;
-    public int damage = 10;
+    public BulletsScriptable bulletScriptable;
 
     private float currentTime = 0.0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (timeLive < currentTime)
+        if (bulletScriptable.timeLive < currentTime)
             Destroy(gameObject);
         currentTime += Time.deltaTime;
     }

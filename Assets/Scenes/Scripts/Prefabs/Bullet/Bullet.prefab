@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d674808c46f8f4caab5a9da29fb948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletScriptable: {fileID: 11400000, guid: cc40e8ebe87fdee4f8b649fc8f585bd4, type: 2}
   timeLive: 5
   damage: 10
 --- !u!54 &-1408320984798301395

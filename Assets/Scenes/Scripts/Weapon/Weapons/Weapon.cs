@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
         // магазин равен объему рожка
         currentBullet = weaponObject.magazineAmmo;
         activateReloading = false;
+        //weaponObject.player = gameObject.transform.parent.transform.parent.gameObject;
     }
     void Update()
     {

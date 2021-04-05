@@ -14,6 +14,9 @@ public enum TypeBullet
 public class BulletsScriptable : ItemScriptableObject
 {
     public TypeBullet typeBullet;
+    public int timeLive;
+    public int damage;
+
     private void Start()
     {
         itemType = ItemType.Bullet;

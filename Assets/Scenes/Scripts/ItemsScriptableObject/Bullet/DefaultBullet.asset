@@ -17,3 +17,5 @@ MonoBehaviour:
   itemDescription: Default bullet, without features
   icon: {fileID: 0}
   typeBullet: 2
+  timeLive: 5
+  damage: 10

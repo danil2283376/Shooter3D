@@ -15,12 +15,13 @@ MonoBehaviour:
   itemType: 0
   itemName: Pistol
   itemDescription: Default pistol
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: a64f8f375a59e474a997808fafa11b34, type: 3}
   player: {fileID: 0}
-  speedBullet: 1
-  timeReload: 3
+  prefabBullet: {fileID: 8347179263386290933, guid: 4363fcdf27d744d4288756f3cb793e94, type: 3}
   magazineAmmo: 6
+  maximumAmmo: 0
   damage: 10
-  rateFire: 5
-  prefabBullet: {fileID: 0}
-  weaponOnPlayer: 0
+  speedBullet: 300
+  timeReload: 1.5
+  rateFire: 60
+  weaponOnPlayer: 1
